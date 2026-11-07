@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxWidth="178.0" minWidth="178.0" prefWidth="178.0" spacing="8.0" styleClass="kartu-produk" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="upi.controller.KartuCatalogController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <ImageView fx:id="fotoView" fitHeight="128.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="namaLabel" styleClass="kartu-nama" wrapText="true" />
+      <Label fx:id="jenisLabel" styleClass="muted" />
+      <Label fx:id="hargaLabel" styleClass="kartu-harga" />
+   </children>
+</VBox>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="upi.controller.DetailController">
+   <top>
+      <HBox spacing="16" styleClass="header">
+         <children>
+            <Label styleClass="title" text="Detail Produk" />
+            <Button onAction="#bukaCatalog" text="Lihat Catalog" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <ScrollPane fitToWidth="true">
+         <content>
+            <VBox spacing="16" styleClass="page">
+               <children>
+                  <VBox spacing="10" styleClass="card">
+                     <children>
+                        <Label styleClass="muted" text="Kode" />
+                        <Label fx:id="kodeLabel" styleClass="subtitle" />
+                        <Label styleClass="muted" text="Nama Produk" />
+                        <Label fx:id="namaLabel" wrapText="true" />
+                        <Label styleClass="muted" text="Jenis Produk" />
+                        <Label fx:id="jenisLabel" />
+                        <Label styleClass="muted" text="harga Produk" />
+                        <Label fx:id="hargaLabel" />
+                        <ImageView fx:id="gambarView" fitHeight="220" fitWidth="320" preserveRatio="true" />
+                        <Label fx:id="pesanLabel" wrapText="true" />
+                        <Button onAction="#tambahLagi" styleClass="button-primary" text="Tambah Produk Lain" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

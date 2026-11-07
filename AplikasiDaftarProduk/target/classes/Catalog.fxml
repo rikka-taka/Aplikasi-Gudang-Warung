@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="770.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="upi.controller.CatalogController">
+   <top>
+      <VBox spacing="12" styleClass="header">
+         <children>
+            <Label styleClass="title" text="Catalog Produk" />
+            <TextField fx:id="cariField" onAction="#cari" promptText="Cari kode atau nama" />
+            <ComboBox fx:id="filterJenisProduk" prefHeight="43.0" prefWidth="237.0" />
+            <FlowPane hgap="10" vgap="8">
+               <children>
+                  <Button onAction="#cari" text="Cari" />
+                  <Button onAction="#resetPencarian" text="Reset" />
+                  <Button onAction="#tambah" styleClass="button-primary" text="Tambah" />
+                  <Button onAction="#detail" text="Detail" />
+                  <Button onAction="#hapus" text="Hapus" />
+               </children>
+            </FlowPane>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+         <content>
+            <TilePane fx:id="daftarPane" hgap="12.0" vgap="12.0">
+               <padding>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </padding>
+            </TilePane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
